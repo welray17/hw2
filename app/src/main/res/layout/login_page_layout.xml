@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        tools:src="@tools:sample/avatars"
+        android:id="@+id/icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:paddingTop="35dp"
+        android:paddingBottom="30dp"
+        />
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/icon"
+        android:paddingBottom="20dp"
+        />
+
+    <EditText
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login"
+        app:layout_constraintLeft_toLeftOf="@+id/welcome"
+        app:layout_constraintRight_toRightOf="@id/welcome"
+        app:layout_constraintTop_toBottomOf="@+id/welcome"
+        android:inputType="text"
+        android:textSize="25sp"
+        android:paddingBottom="10dp"
+        android:contentDescription="@string/login"/>
+
+    <EditText
+        android:id="@+id/passwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/password"
+        app:layout_constraintLeft_toLeftOf="@+id/login"
+        app:layout_constraintRight_toRightOf="@id/login"
+        app:layout_constraintTop_toBottomOf="@+id/login"
+        android:inputType="text"
+        android:textSize="25sp"
+        android:paddingBottom="20dp"
+        android:contentDescription="@string/password"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@+id/passwd"
+        app:layout_constraintRight_toLeftOf="@id/passwd"
+        app:layout_constraintTop_toBottomOf="@+id/passwd"
+        android:text="@string/sign_in"
+        android:contentDescription="@string/sign_in"
+        android:backgroundTint="@color/purple_200"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@+id/passwd"
+        app:layout_constraintRight_toRightOf="@id/passwd"
+        app:layout_constraintTop_toBottomOf="@+id/passwd"
+        android:text="@string/sign_up"
+        android:contentDescription="@string/sign_up"
+        android:backgroundTint="@color/teal_200"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
